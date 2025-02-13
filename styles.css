@@ -315,3 +315,158 @@ footer p {
     font-family: 'Georgia', serif;
     letter-spacing: 1px;
 }
+/* Add these media queries at the end of your existing CSS */
+
+/* Tablet and smaller devices */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.75rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        padding: 8px 15px;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .featured-posts {
+        padding: 1.5rem;
+    }
+
+    .featured-posts h3 {
+        font-size: 1.75rem;
+    }
+
+    .post {
+        padding: 1.5rem;
+    }
+}
+
+/* Mobile devices */
+@media screen and (max-width: 480px) {
+    header {
+        padding: 0.75rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        gap: 5px;
+    }
+
+    nav ul li a {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+
+    main {
+        padding: 1rem 0;
+    }
+
+    .hero, 
+    .featured-posts article,
+    .about,
+    .blog,
+    .contact,
+    .post {
+        padding: 1.5rem;
+        margin: 1rem auto;
+        width: 95%;
+    }
+
+    .hero h2 {
+        font-size: 1.75rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero button,
+    .read-more,
+    .contact button,
+    .affiliate-link {
+        width: 100%;
+        text-align: center;
+        padding: 0.8rem 1rem;
+    }
+
+    .featured-posts h3 {
+        font-size: 1.5rem;
+    }
+
+    .featured-posts article h4 {
+        font-size: 1.25rem;
+    }
+
+    .blog article h3 {
+        font-size: 1.5rem;
+    }
+
+    .blog article p {
+        font-size: 1.1rem;
+    }
+
+    .contact label {
+        font-size: 1.1rem;
+    }
+
+    .contact input,
+    .contact textarea {
+        padding: 0.8rem;
+    }
+
+    footer {
+        padding: 0.75rem 0;
+        position: relative; /* Change from fixed to relative for better mobile experience */
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+}
+
+/* For very small devices */
+@media screen and (max-width: 320px) {
+    header h1 {
+        font-size: 1.25rem;
+    }
+
+    nav ul li a {
+        padding: 5px 10px;
+        font-size: 0.85rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Fix for devices with notches/dynamic islands */
+@supports (padding: env(safe-area-inset-top)) {
+    header {
+        padding-top: env(safe-area-inset-top);
+    }
+
+    footer {
+        padding-bottom: env(safe-area-inset-bottom);
+    }
+}
