@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background: url('images/1351397.png') no-repeat center center/cover; /* Image background for footer */
+    background: url('images/1351397.jpg') no-repeat center center/cover; /* Image background for footer */
     color: #fff;
     padding: 0.5rem 0; /* Reduced padding for a smaller header */
     text-align: center;
@@ -299,7 +299,7 @@ footer {
 }
 
 footer {
-    background: url('images/1351397.png') no-repeat center center/cover; /* Image background for footer */
+    background: url('images/1351397.jpg') no-repeat center center/cover; /* Image background for footer */
 
     color: #fff;
     text-align: center;

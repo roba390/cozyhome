@@ -9,7 +9,7 @@ body {
 }
 
 .blog-header {
-    background: url('images/1351397.png') no-repeat center center/cover; /* Image background for header */
+    background: url('images/1351397.jpg') no-repeat center center/cover; /* Image background for header */
     color: #fff;
     padding: 1rem 2rem;
     text-align: center;
@@ -170,7 +170,7 @@ nav ul li a:hover {
 }
 
 .blog-footer {
-    background: url('images/1351397.png') no-repeat center center/cover; /* Image background for footer */
+    background: url('images/1351397.jpg') no-repeat center center/cover; /* Image background for footer */
     color: #fff;
     text-align: center;
     padding: 1rem 0;
