@@ -108,6 +108,10 @@ main {
     cursor: pointer;
     border-radius: 5px;
     text-decoration: none;
+    display: inline-block;
+    width: auto; /* Change from 100% to auto for default state */
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .hero button:hover,
@@ -214,6 +218,12 @@ footer {
     cursor: pointer;
     border-radius: 5px;
     text-decoration: none;
+    display: inline-block;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .read-more:hover {
@@ -403,16 +413,16 @@ footer p {
     }
 
     .hero, 
-    .featured-posts article,
-    .about,
-    .blog,
-    .contact,
+    .featured-posts, 
+    .about, 
+    .blog, 
+    .contact, 
     .post {
-        padding: 1.5rem;
-        margin: 1rem auto;
-        width: 95%;
+        width: min(90%, 800px); /* Use min() for responsive width */
+        margin-left: auto;
+        margin-right: auto;
+        padding: 2rem 1rem; /* Reduce padding on smaller screens */
     }
-
     .hero h2 {
         font-size: 1.75rem;
     }
@@ -423,14 +433,32 @@ footer p {
     }
 
     .hero button,
-    .read-more,
+    /* .read-more, */
     .contact button,
     .affiliate-link {
         width: 100%;
-        text-align: center;
-        padding: 0.8rem 1rem;
+        max-width: 100%;
+        box-sizing: border-box;
     }
-
+    .read-more {
+        width: 100%; /* Full width only on mobile */
+        display: block; /* Stack buttons vertically on mobile */
+        text-align: center;
+        margin: 0.5rem 0;
+        white-space: normal; /* Allow text to wrap */
+        height: auto; /* Allow height to adjust based on content */
+        min-height: 44px; /* Minimum touch target size */
+    }
+    .featured-posts .read-more,
+    .blog article .read-more {
+        margin-top: 1rem;
+    }
+    .featured-posts article,
+.blog article {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    overflow: hidden; /* Prevent content overflow */
+}
     .featured-posts h3 {
         font-size: 1.5rem;
     }
