@@ -42,7 +42,7 @@ body {
     padding: var(--container-padding);
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: sticky;
+    position: static;
     top: 0;
     z-index: 1000;
     height: var(--header-height);
@@ -286,25 +286,27 @@ nav ul li a:focus {
 /* Media Queries */
 @media screen and (max-width: 768px) {
     .blog-header {
-        flex-direction: column;
+        flex-direction: row;
         height: auto;
         padding: 1rem;
         gap: 1rem;
     }
 
     nav ul {
-        flex-direction: column;
-        width: 100%;
+        flex-direction: row; /* Change from column to row */
+        width: auto; /* Remove 100% width */
+        overflow-x: auto; /* Allow horizontal scrolling if needed */
+        -webkit-overflow-scrolling: touch;
     }
 
     nav ul li {
-        width: 100%;
+        width: auto;
     }
-
     nav ul li a {
-        display: block;
+        display: inline-block; /* Change from block to inline-block */
         text-align: center;
         padding: 10px;
+        white-space: nowrap; /* Prevent text wrapping */
     }
 
     .content {
