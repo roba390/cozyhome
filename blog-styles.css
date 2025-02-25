@@ -197,13 +197,10 @@ nav ul li a:focus {
 }
 
 .product-image {
-    position: relative;
-    margin: 1.5rem 0;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    min-width: 400px; /* Minimum width - adjust as needed */
-    max-width: 450px; /* Maximum width */
+    min-width: 0; /* Remove fixed min-width */
+    width: 100%; /* Make responsive */
+    max-width: 450px; /* Keep max constraint */
+    margin: 1.5rem auto; /* Center the image */
 }
 
 .product-image img {
