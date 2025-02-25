@@ -196,23 +196,22 @@ nav ul li a:focus {
     transform: translateY(-2px);
 }
 
-/* Image containment */
 .product-image {
     position: relative;
     margin: 1.5rem 0;
     border-radius: 8px;
-    overflow: hidden; /* Prevent overflow */
+    overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 600px; /* Constrain maximum size */
+    min-width: 400px; /* Minimum width - adjust as needed */
+    max-width: 450px; /* Maximum width */
 }
 
 .product-image img {
-    width: 100%;
-    height: auto;
+    width: 100%; /* Image fills the container width */
+    height: auto; /* Height adjusts proportionally */
     display: block;
     border-radius: 8px;
-    object-fit: cover; /* Ensure images don't stretch */
-    aspect-ratio: 16/9; /* Optional: maintain aspect ratio */
+    /* No object-fit here */
 }
 /* Sidebar styles */
 .sidebar {
